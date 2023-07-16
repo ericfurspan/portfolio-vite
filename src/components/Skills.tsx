@@ -1,22 +1,18 @@
-import { Chip, Grid, Typography } from '@mui/material';
+import { Chip, Grid, Stack } from '@mui/material';
+import SectionHeader from './common/SectionHeader';
 
-interface Props {
-  skills: string[];
-}
+const Skills = ({ skills = [], title }: { skills: string[]; title?: string }) => (
+  <Stack alignItems="center" spacing={2} maxWidth="sm">
+    {title && <SectionHeader title={title} />}
 
-const Skills = ({ skills = [] }: Props) => {
-  return (
-    <>
-      <Typography variant="overline">Skills</Typography>
-      <Grid container spacing={1}>
-        {skills.map((skill) => (
-          <Grid item key={skill}>
-            <Chip label={skill} />
-          </Grid>
-        ))}
-      </Grid>
-    </>
-  );
-};
+    <Grid container spacing={1} justifyContent="center">
+      {skills.map((skill) => (
+        <Grid item key={skill}>
+          <Chip variant="outlined" color="default" size="small" label={skill} />
+        </Grid>
+      ))}
+    </Grid>
+  </Stack>
+);
 
 export default Skills;

@@ -1,21 +1,18 @@
-import { Container } from '@mui/material';
-import AppBar from './components/AppBar';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-
-const projects = [{ name: 'Foo' }];
-const skills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'React-Native'];
+import { Container, Stack } from '@mui/material';
+import { About, AppBar, Skills, SocialLinks } from './components';
+import appConfig from './config';
 
 const App = () => {
   return (
-    <>
+    <Container maxWidth="lg" sx={{ paddingTop: 2 }}>
       <AppBar />
 
-      <Container sx={{ padding: 4 }}>
-        <Projects projects={projects} />
-        <Skills skills={skills} />
-      </Container>
-    </>
+      <Stack spacing={12} alignItems="center">
+        <About />
+        <Skills title="Technologies" skills={appConfig.skills} />
+        <SocialLinks title="Contact" socialLinks={appConfig.links as any} />
+      </Stack>
+    </Container>
   );
 };
 

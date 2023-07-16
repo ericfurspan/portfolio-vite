@@ -1,10 +1,16 @@
+import { createRoot } from 'react-dom/client';
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ThemeProvider from './theme/index.tsx';
 import App from './App.tsx';
-import './index.css';
+import '@fontsource-variable/raleway';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+const container = document.getElementById('root');
+const root = createRoot(container as HTMLElement);
+
+root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
 );
