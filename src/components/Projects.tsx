@@ -7,8 +7,6 @@ import {
   Typography,
   Button,
   Chip,
-  Box,
-  Stack,
 } from '@mui/material';
 import { Launch as LaunchIcon, GitHub as GitHubIcon } from '@mui/icons-material';
 

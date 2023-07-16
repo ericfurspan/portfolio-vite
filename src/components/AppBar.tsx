@@ -1,5 +1,4 @@
-import { AppBar as MuiAppBar, Toolbar, Typography, Avatar, Stack } from '@mui/material';
-import personalLogoPng from '../assets/ef-logo.png';
+import { AppBar as MuiAppBar, Toolbar, Typography, Stack } from '@mui/material';
 import appConfig from '../config';
 import ToggleColorMode from './common/ToggleColorMode';
 
