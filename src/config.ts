@@ -1,14 +1,15 @@
 export default {
   name: 'Eric Furspan',
   title: 'Software Engineer',
-  about:
-    "I'm Eric Furspan, a New York based software developer. I specialize in frontend development for mobile and web based applications with a focus on usability, performance and scalability.",
-  links: [
-    { name: 'email', url: 'mailto:eric.furspan@gmail.com' },
-    { name: 'github', url: 'https://github.com/ericfurspan' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/eric-furspan/' },
-    { name: 'stackoverflow', url: 'https://stackoverflow.com/users/5792155/eric-furspan' },
-    { name: 'codepen', url: 'https://codepen.io/ericfurspan' },
+  about: [
+    "I'm Eric, a New York based software developer.",
+    'I specialize in frontend development for mobile and web based applications, with a focus on usability, performance and scalability.',
+  ],
+  expertise: [
+    'User interface design / component development',
+    'Data fetching and API integration',
+    'Scaling, Testing, monitoring, and securing applications',
+    'Troubleshooting, debugging, documentation, code refactoring',
   ],
   skills: [
     'HTML',
@@ -28,6 +29,13 @@ export default {
     'MongoDB',
     'Git',
     'AWS',
+  ],
+  links: [
+    { name: 'email', url: 'mailto:eric.furspan@gmail.com' },
+    { name: 'github', url: 'https://github.com/ericfurspan' },
+    { name: 'linkedin', url: 'https://www.linkedin.com/in/eric-furspan/' },
+    { name: 'stackoverflow', url: 'https://stackoverflow.com/users/5792155/eric-furspan' },
+    { name: 'codepen', url: 'https://codepen.io/ericfurspan' },
   ],
   projects: [
     {
