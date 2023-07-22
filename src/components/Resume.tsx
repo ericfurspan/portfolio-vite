@@ -26,7 +26,6 @@ const Resume = ({ title }: Props) => (
 
     <object
       data={appConfig.resumeViewUrl}
-      type="application/pdf"
       title={`${appConfig.name} Résumé`}
       width="100%"
       height="1000px"
