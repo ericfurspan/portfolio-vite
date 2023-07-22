@@ -7,7 +7,7 @@ const ToggleColorMode = () => {
   const colorMode = useContext(ColorModeContext);
 
   return (
-    <IconButton onClick={colorMode.toggleColorMode}>
+    <IconButton onClick={colorMode.toggleColorMode} aria-label="Toggle color mode">
       <LightModeIcon />
     </IconButton>
   );

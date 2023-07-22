@@ -33,6 +33,7 @@ const SocialLinks = ({ socialLinks = [], title }: Props) => (
             href={url}
             target="_blank"
             rel="noreferrer noopener"
+            aria-label={`Link to ${name}`}
             color="inherit"
             size="large"
             sx={{
