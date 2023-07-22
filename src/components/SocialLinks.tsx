@@ -1,5 +1,5 @@
 import { createElement } from 'react';
-import { Grid, IconButton, Stack, createSvgIcon } from '@mui/material';
+import { Grid, IconButton, Stack, Tooltip, createSvgIcon } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faStackOverflow,
@@ -57,25 +57,27 @@ const SocialLinks = ({ socialLinks = [], title }: Props) => (
     <Grid container spacing={2}>
       {socialLinks.map(({ name, url, customIcon }) => (
         <Grid item key={name}>
-          <IconButton
-            href={url}
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label={`Link to ${name}`}
-            color="inherit"
-            size="large"
-            disableRipple
-            sx={{
-              transition: 'transform 300ms ease',
-              '&:hover': { transform: 'scale(1.1)' },
-            }}
-          >
-            {customIcon ? (
-              createElement(customIconMap[name])
-            ) : (
-              <FontAwesomeIcon icon={faIconMap[name]} />
-            )}
-          </IconButton>
+          <Tooltip title={name.toUpperCase()} arrow describeChild>
+            <IconButton
+              href={url}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label={`Link to ${name}`}
+              color="inherit"
+              size="large"
+              disableRipple
+              sx={{
+                transition: 'transform 300ms ease',
+                '&:hover': { transform: 'scale(1.1)' },
+              }}
+            >
+              {customIcon ? (
+                createElement(customIconMap[name])
+              ) : (
+                <FontAwesomeIcon icon={faIconMap[name]} />
+              )}
+            </IconButton>
+          </Tooltip>
         </Grid>
       ))}
     </Grid>
