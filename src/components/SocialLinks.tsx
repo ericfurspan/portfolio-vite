@@ -23,10 +23,10 @@ interface Props {
 }
 
 const SocialLinks = ({ socialLinks = [], title }: Props) => (
-  <Stack alignItems="center" spacing={2}>
+  <Stack spacing={2}>
     {title && <SectionHeader title={title} />}
 
-    <Grid container spacing={1} justifyContent="center">
+    <Grid container spacing={1}>
       {socialLinks.map(({ name, url }) => (
         <Grid item key={name}>
           <IconButton

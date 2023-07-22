@@ -2,7 +2,7 @@ import { Chip, Grid, Stack } from '@mui/material';
 import SectionHeader from './common/SectionHeader';
 
 const Skills = ({ skills = [], title }: { skills: string[]; title?: string }) => (
-  <Stack alignItems="center" spacing={2}>
+  <Stack spacing={2}>
     {title && <SectionHeader title={title} />}
 
     <Grid container spacing={1} justifyContent="center">

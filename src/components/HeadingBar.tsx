@@ -2,8 +2,8 @@ import { AppBar as MuiAppBar, Toolbar, Typography, Stack } from '@mui/material';
 import ToggleColorMode from './common/ToggleColorMode';
 import appConfig from '../config';
 
-const AppBar = () => (
-  <MuiAppBar position="static" color="transparent" elevation={0} sx={{ marginBottom: 6 }}>
+const HeadingBar = () => (
+  <MuiAppBar position="static" color="transparent" elevation={0} sx={{ marginBottom: 3 }}>
     <Toolbar>
       <Stack sx={{ flexGrow: 1 }}>
         <Typography
@@ -26,4 +26,4 @@ const AppBar = () => (
   </MuiAppBar>
 );
 
-export default AppBar;
+export default HeadingBar;

@@ -47,20 +47,20 @@ export default {
       tools: ['react-native', 'xcode', 'firebase'],
     },
     {
-      title: 'Local Hoops Map',
-      subtitle: '',
-      liveUrl: '',
-      sourceUrl: '',
-      imageUrl:
-        'https://cdn.sanity.io/images/vb687n4o/production/d799d870e76a27e388bf24146f4914ce15547acd-1569x1056.svg',
+      title: 'Reps for Responders',
+      subtitle: 'Giving First Responders a place to feel, heal & thrive.',
+      liveUrl: 'https://repsforresponders.org',
+      sourceUrl: 'https://github.com/ericfurspan/rfr',
+      imageUrl: '/rfr.png',
       tools: ['react', 'chakra-ui'],
     },
     {
-      title: 'Reps for Responders',
-      subtitle: '',
-      liveUrl: 'https://repsforresponders.org',
-      sourceUrl: '',
-      imageUrl: '/rfr.png',
+      title: 'Local Hoops Map',
+      subtitle: 'Never Stop Searching For That Perfect Hoop.',
+      liveUrl: 'https://local-hoops.com/pages/map',
+      sourceUrl: '', // https://www.linkedin.com/company/localhoops1
+      imageUrl:
+        'https://cdn.sanity.io/images/vb687n4o/production/d799d870e76a27e388bf24146f4914ce15547acd-1569x1056.svg',
       tools: ['react', 'chakra-ui'],
     },
     // {

@@ -7,8 +7,11 @@ import {
   Typography,
   Button,
   Chip,
+  Stack,
+  ButtonGroup,
 } from '@mui/material';
 import { Launch as LaunchIcon, GitHub as GitHubIcon } from '@mui/icons-material';
+import { SectionHeader } from '.';
 
 interface Props {
   projects: {
@@ -19,69 +22,79 @@ interface Props {
     imageUrl: string;
     tools: string[];
   }[];
+  title?: string;
 }
 
-const Projects = ({ projects = [] }: Props) => {
+const Projects = ({ projects = [], title }: Props) => {
   return (
-    <Grid container spacing={8} direction="column" alignItems="center">
-      {projects.map((project) => (
-        <Grid item key={project.title}>
-          <Card sx={{ width: 400 }}>
-            <CardMedia
-              component="img"
-              height="130"
-              sx={{ objectFit: 'scale-down', py: 1 }}
-              image={project.imageUrl}
-              title={project.title}
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h4">
-                {project.title}
-              </Typography>
+    <Stack spacing={2}>
+      {title && <SectionHeader title={title} />}
 
-              {project.subtitle && (
-                <Typography variant="body2" color="text.secondary">
-                  {project.subtitle}
+      <Grid container spacing={3}>
+        {projects.map(({ title, subtitle, tools, imageUrl, liveUrl, sourceUrl }) => (
+          <Grid item xs={12} md={6} key={title}>
+            <Card variant="outlined" sx={{ p: 2, height: '100%' }}>
+              <CardMedia
+                component="img"
+                height="80"
+                sx={{ objectFit: 'contain' }}
+                image={imageUrl}
+                title={title}
+              />
+              <CardContent sx={{ height: 150 }}>
+                <Typography gutterBottom variant="h5">
+                  {title}
                 </Typography>
-              )}
 
-              <Grid container spacing={1} mt={1}>
-                {project.tools.map((tool) => (
-                  <Grid item key={tool}>
-                    <Chip size="small" variant="outlined" label={tool} />
-                  </Grid>
-                ))}
-              </Grid>
-            </CardContent>
+                {subtitle && (
+                  <Typography variant="body2" color="text.secondary">
+                    {subtitle}
+                  </Typography>
+                )}
 
-            <CardActions>
-              <Button
-                href={project.liveUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                variant="text"
-                size="small"
-                color="primary"
-                endIcon={<LaunchIcon />}
-              >
-                Open
-              </Button>
-              <Button
-                href={project.sourceUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                variant="text"
-                size="small"
-                color="inherit"
-                endIcon={<GitHubIcon />}
-              >
-                View Source
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-      ))}
-    </Grid>
+                <Grid container spacing={1} mt={1}>
+                  {tools.map((tool) => (
+                    <Grid item key={tool}>
+                      <Chip size="small" color="default" variant="filled" label={tool} />
+                    </Grid>
+                  ))}
+                </Grid>
+              </CardContent>
+
+              <CardActions sx={{ mt: 2 }}>
+                <ButtonGroup
+                  size="medium"
+                  aria-label={`${title} project links`}
+                  fullWidth
+                  disableElevation
+                >
+                  <Button
+                    href={liveUrl}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    variant="contained"
+                    color="primary"
+                    endIcon={<LaunchIcon />}
+                  >
+                    Open
+                  </Button>
+                  {sourceUrl && (
+                    <Button
+                      href={sourceUrl}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      endIcon={<GitHubIcon />}
+                    >
+                      View Source
+                    </Button>
+                  )}
+                </ButtonGroup>
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </Stack>
   );
 };
 
