@@ -6,7 +6,7 @@ const SectionHeader = ({ title }: { title: string }) => (
     color="info.dark"
     component="h2"
     fontWeight={600}
-    sx={{ textTransform: 'uppercase' }}
+    sx={{ textTransform: 'uppercase', mb: 2 }}
   >
     {title}
   </Typography>

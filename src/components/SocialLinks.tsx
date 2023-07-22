@@ -23,7 +23,7 @@ interface Props {
 }
 
 const SocialLinks = ({ socialLinks = [], title }: Props) => (
-  <Stack spacing={2}>
+  <Stack direction="column">
     {title && <SectionHeader title={title} />}
 
     <Grid container spacing={1}>

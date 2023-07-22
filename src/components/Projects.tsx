@@ -27,7 +27,7 @@ interface Props {
 
 const Projects = ({ projects = [], title }: Props) => {
   return (
-    <Stack spacing={2}>
+    <Stack direction="column">
       {title && <SectionHeader title={title} />}
 
       <Grid container spacing={3}>
