@@ -44,7 +44,7 @@ export default {
       url: 'https://app.daily.dev/ericfurspan',
       customIcon: true,
     },
-    { name: 'codepen', url: 'https://codepen.io/ericfurspan' },
+    // { name: 'codepen', url: 'https://codepen.io/ericfurspan' },
   ],
   projects: [
     {
