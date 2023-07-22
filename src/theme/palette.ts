@@ -38,9 +38,9 @@ const GREY = {
 };
 
 const COMMON = {
-  common: { black: '#111', white: '#fff' },
-  primary: { ...PRIMARY, contrastText: '#fff' },
-  secondary: { ...SECONDARY, contrastText: '#fff' },
+  common: { black: GREY[900], white: GREY[0] },
+  primary: { ...PRIMARY, contrastText: GREY[0] },
+  secondary: { ...SECONDARY, contrastText: GREY[0] },
   action: {
     hover: GREY[500_8],
     selected: GREY[500_16],
@@ -57,14 +57,14 @@ const palette = {
     ...COMMON,
     mode: 'light',
     text: { primary: GREY[800], secondary: GREY[600], disabled: GREY[500] },
-    background: { paper: '#fff', default: GREY[100], neutral: GREY[200] },
+    background: { paper: GREY[0], default: GREY[100], neutral: GREY[200] },
     action: { active: GREY[600], ...COMMON.action },
   },
   dark: {
     ...COMMON,
     mode: 'dark',
-    text: { primary: '#fff', secondary: GREY[500], disabled: GREY[600] },
-    background: { paper: undefined, default: GREY[900], neutral: GREY[500_16] },
+    text: { primary: GREY[0], secondary: GREY[500], disabled: GREY[600] },
+    background: { paper: GREY[500_8], default: GREY[900], neutral: GREY[500_16] },
     action: { active: GREY[500], ...COMMON.action },
   },
 } as const;

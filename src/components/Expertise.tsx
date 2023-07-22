@@ -1,9 +1,13 @@
 import { Container, Typography } from '@mui/material';
-import appConfig from '../config';
 
-const Expertise = () => (
+interface Props {
+  expertise: string[];
+  title?: string;
+}
+
+const Expertise = ({ expertise }: Props) => (
   <Container>
-    {appConfig.expertise.map((expertise) => (
+    {expertise.map((expertise) => (
       <Typography key={expertise}>{expertise}</Typography>
     ))}
   </Container>

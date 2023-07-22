@@ -4,7 +4,7 @@ import appConfig from '../config';
 const About = () => (
   <Container>
     {appConfig.about.map((str) => (
-      <Typography key={str} gutterBottom>
+      <Typography key={str} sx={{ mb: 2 }}>
         {str}
       </Typography>
     ))}

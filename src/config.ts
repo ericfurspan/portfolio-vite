@@ -2,8 +2,8 @@ export default {
   name: 'Eric Furspan',
   title: 'Software Engineer',
   about: [
-    "I'm Eric, a New York based software developer.",
-    'I specialize in frontend development for mobile and web based applications, with a focus on usability, performance and scalability.',
+    'I am a New York based Software Engineer specializing in Web technologies and Frontend Development.',
+    'Some key areas of expertise include usability, accessibility, performance, and scalability.',
   ],
   expertise: [
     'User interface design / component development',
@@ -30,6 +30,10 @@ export default {
     'Git',
     'AWS',
   ],
+  resumeViewUrl:
+    'https://docs.google.com/document/d/e/2PACX-1vRFYzxx4MwLb7-eZOtluuLsJn2yi6-IbryPkOfAKq3XjJIdSEfcQdAz_FPs7tpKJz3IVBQuJRLX0W1o/pub?embedded=true',
+  resumeDownloadUrl:
+    'https://docs.google.com/document/d/1DuTTxyWvfNpXmj2qNrJnrkcUS2x6OG4cKsmsgyuTm-4/export?format=pdf',
   links: [
     { name: 'email', url: 'mailto:eric.furspan@gmail.com' },
     { name: 'github', url: 'https://github.com/ericfurspan' },

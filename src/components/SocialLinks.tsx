@@ -23,10 +23,10 @@ interface Props {
 }
 
 const SocialLinks = ({ socialLinks = [], title }: Props) => (
-  <Stack direction="column">
+  <Stack direction="column" alignSelf="center">
     {title && <SectionHeader title={title} />}
 
-    <Grid container spacing={1}>
+    <Grid container spacing={2}>
       {socialLinks.map(({ name, url }) => (
         <Grid item key={name}>
           <IconButton
@@ -36,11 +36,11 @@ const SocialLinks = ({ socialLinks = [], title }: Props) => (
             aria-label={`Link to ${name}`}
             color="inherit"
             size="large"
+            disableRipple
             sx={{
               transition: 'transform 300ms ease',
               '&:hover': { transform: 'scale(1.1)' },
             }}
-            disableRipple
           >
             <FontAwesomeIcon icon={iconMap[name]} />
           </IconButton>

@@ -1,12 +1,15 @@
 import { Typography } from '@mui/material';
 
-const SectionHeader = ({ title }: { title: string }) => (
+interface Props {
+  title: string;
+}
+
+const SectionHeader = ({ title }: Props) => (
   <Typography
     variant="subtitle2"
-    color="info.dark"
     component="h2"
-    fontWeight={600}
-    sx={{ textTransform: 'uppercase', mb: 2 }}
+    fontWeight={700}
+    sx={{ textTransform: 'uppercase', mb: 3 }}
   >
     {title}
   </Typography>
