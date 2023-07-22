@@ -39,6 +39,11 @@ export default {
     { name: 'github', url: 'https://github.com/ericfurspan' },
     { name: 'linkedin', url: 'https://www.linkedin.com/in/eric-furspan/' },
     { name: 'stackoverflow', url: 'https://stackoverflow.com/users/5792155/eric-furspan' },
+    {
+      name: 'dailydev',
+      url: 'https://app.daily.dev/ericfurspan',
+      customIcon: true,
+    },
     { name: 'codepen', url: 'https://codepen.io/ericfurspan' },
   ],
   projects: [
