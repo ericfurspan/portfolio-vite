@@ -8,7 +8,7 @@ export interface ExpertiseProps {
 const Expertise = ({ expertise }: ExpertiseProps) => (
   <Container>
     {expertise.map((expertise) => (
-      <Typography key={expertise} variant="subtitle2" fontWeight={300}>
+      <Typography key={expertise} variant="body1" fontWeight={300}>
         {`- ${expertise}`}
       </Typography>
     ))}
