@@ -2,15 +2,17 @@ export default {
   name: 'Eric Furspan',
   title: 'Software Engineer',
   about: [
-    'I am a New York based Software Engineer specializing in Web technologies and Frontend Development.',
-    'Some key areas of expertise include usability, accessibility, performance, and scalability.',
+    'Software Engineer from New York, passionate about crafting engaging & intuitive user experiences on the web.',
   ],
-  expertise: [
-    'User interface design / component development',
-    'Data fetching and API integration',
-    'Scaling, Testing, monitoring, and securing applications',
-    'Troubleshooting, debugging, documentation, code refactoring',
-  ],
+  // expertise: [
+  //   'React application design, development, and planning.',
+  //   'User-experience, usability, and accessibility.',
+  //   'Enhancing code quality, scalability, and maintainability.',
+  //   'Implementing end-to-end & unit tests, maintaining CI/CD pipelines, and automating routine tasks.',
+  //   'Debugging and resolving issues, analytics & performance monitoring, and generating effective technical documentation.',
+  //   'Improving developer experience, reducing friction, and modernizing legacy codebases.',
+  // ],
+  expertise: [],
   skills: [
     'HTML',
     'CSS',
@@ -35,16 +37,16 @@ export default {
   resumeDownloadUrl:
     'https://docs.google.com/document/d/1DuTTxyWvfNpXmj2qNrJnrkcUS2x6OG4cKsmsgyuTm-4/export?format=pdf',
   links: [
-    { name: 'email', url: 'mailto:eric.furspan@gmail.com' },
-    { name: 'github', url: 'https://github.com/ericfurspan' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/eric-furspan/' },
-    { name: 'stackoverflow', url: 'https://stackoverflow.com/users/5792155/eric-furspan' },
+    { name: 'Email', url: 'mailto:eric.furspan@gmail.com' },
+    { name: 'GitHub', url: 'https://github.com/ericfurspan' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/eric-furspan/' },
+    { name: 'StackOverflow', url: 'https://stackoverflow.com/users/5792155/eric-furspan' },
     {
-      name: 'dailydev',
+      name: 'daily.dev',
       url: 'https://app.daily.dev/ericfurspan',
       customIcon: true,
     },
-    // { name: 'codepen', url: 'https://codepen.io/ericfurspan' },
+    // { name: 'Codepen', url: 'https://codepen.io/ericfurspan' },
   ],
   projects: [
     {
