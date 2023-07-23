@@ -1,6 +1,5 @@
-import { Box, Container, Divider, Stack } from '@mui/material';
+import { Container, Divider, Stack } from '@mui/material';
 import { HeadingBar, About, Skills, SocialLinks, Projects, Resume, Expertise } from './components';
-import { ToggleColorMode } from './components/common';
 import { SocialLinksProps } from './components/SocialLinks';
 import { ProjectsProps } from './components/Projects';
 import { SkillsProps } from './components/Skills';
