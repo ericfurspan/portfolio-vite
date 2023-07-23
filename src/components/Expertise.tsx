@@ -9,7 +9,7 @@ const Expertise = ({ expertise }: ExpertiseProps) => (
   <Container>
     {expertise.map((expertise) => (
       <Typography key={expertise} variant="body1" fontWeight={300}>
-        {`- ${expertise}`}
+        {`⁃ ${expertise}`}
       </Typography>
     ))}
   </Container>

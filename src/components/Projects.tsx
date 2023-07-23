@@ -36,7 +36,7 @@ const Projects = ({ projects = [], title }: ProjectsProps) => (
           <Card variant="outlined" sx={{ p: 2, height: '100%' }}>
             <CardMedia
               component="img"
-              height="120"
+              height="110"
               sx={{ objectFit: 'contain', objectPosition: 'center top' }}
               image={imageUrl}
               title={title}

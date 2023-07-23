@@ -17,10 +17,10 @@ const App = () => {
   const { links, projects, skills, expertise } = appConfig as AppProps;
 
   return (
-    <Container maxWidth="md" sx={{ paddingTop: 3 }}>
+    <Container maxWidth="md" sx={{ paddingY: 8 }}>
       <HeadingBar />
 
-      <Stack spacing={10} width="100%">
+      <Stack spacing={12} width="100%">
         <Container>
           <About />
           <Expertise expertise={expertise} />
