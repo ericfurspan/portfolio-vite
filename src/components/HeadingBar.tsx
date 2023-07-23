@@ -1,20 +1,21 @@
-import { AppBar as MuiAppBar, Toolbar, Typography, Stack, Box, Button } from '@mui/material';
+import { AppBar as MuiAppBar, Toolbar, Typography, Stack, Box, Button, Link } from '@mui/material';
 import appConfig from '../config';
 
 const navItems = ['Projects', 'Contact'];
 
 const StyledTypography = ({ text }: { text: string }) => (
-  <Typography
-    variant="h5"
-    component="h1"
-    noWrap
-    sx={{
-      fontFamily: 'fontFamilyRaleway',
-      textTransform: 'uppercase',
-    }}
-  >
-    {text}
-  </Typography>
+  <Link href="/" color="inherit" underline="none">
+    <Typography
+      variant="h5"
+      component="h1"
+      sx={{
+        fontFamily: 'fontFamilyRaleway',
+        textTransform: 'uppercase',
+      }}
+    >
+      {text}
+    </Typography>
+  </Link>
 );
 
 const HeadingBar = () => (
