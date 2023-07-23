@@ -37,7 +37,7 @@ const Projects = ({ projects = [], title }: ProjectsProps) => (
               component="img"
               height="110"
               sx={{ objectFit: 'contain', objectPosition: 'center top' }}
-              image={new URL(imageUrl, import.meta.url).href}
+              image={imageUrl}
               title={title}
             />
 

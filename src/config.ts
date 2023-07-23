@@ -66,7 +66,7 @@ export default {
       subtitle: 'Find basketball courts, anywhere.',
       liveUrl: 'https://apps.apple.com/us/app/local-hoops/id1452756521',
       sourceUrl: 'https://github.com/ericfurspan/Local-Hoops',
-      imageUrl: '../assets/local-hoops.svg',
+      imageUrl: '/local-hoops.svg',
       tools: ['react-native', 'xcode', 'firebase'],
     },
     {
@@ -74,7 +74,7 @@ export default {
       subtitle: 'Giving First Responders a place to feel, heal & thrive.',
       liveUrl: 'https://repsforresponders.org',
       sourceUrl: 'https://github.com/ericfurspan/rfr',
-      imageUrl: '../assets/rfr.png',
+      imageUrl: '/rfr.png',
       tools: ['react', 'chakra-ui'],
     },
     {
