@@ -10,10 +10,10 @@ const Skills = ({ skills = [], title }: SkillsProps) => (
   <Stack direction="column">
     {title && <SectionHeader title={title} />}
 
-    <Grid container spacing={1} justifyContent="center">
+    <Grid container spacing={1.5} justifyContent="center">
       {skills.map((skill) => (
         <Grid item key={skill}>
-          <Chip variant="filled" color="default" size="small" label={skill} />
+          <Chip variant="filled" color="default" size="medium" label={skill} />
         </Grid>
       ))}
     </Grid>

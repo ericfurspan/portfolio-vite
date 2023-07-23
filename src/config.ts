@@ -4,15 +4,14 @@ export default {
   about: [
     'Software Engineer from New York, passionate about crafting engaging & intuitive user experiences on the web.',
   ],
-  // expertise: [
-  //   'React application design, development, and planning.',
-  //   'User-experience, usability, and accessibility.',
-  //   'Enhancing code quality, scalability, and maintainability.',
-  //   'Implementing end-to-end & unit tests, maintaining CI/CD pipelines, and automating routine tasks.',
-  //   'Debugging and resolving issues, analytics & performance monitoring, and generating effective technical documentation.',
-  //   'Improving developer experience, reducing friction, and modernizing legacy codebases.',
-  // ],
-  expertise: [],
+  expertise: [
+    'Designing, developing, and planning React applications.',
+    'Fostering usability, accessibility, and web security.',
+    'Enhancing code quality, scalability, and maintainability.',
+    'Writing end-to-end & unit tests, maintaining CI/CD pipelines, and automating routine tasks.',
+    'Reducing developer friction, implementing best practices, and modernizing legacy codebases.',
+    'Debugging, troubleshooting, analytics & performance monitoring, and writing technical documentation.',
+  ],
   skills: [
     'HTML',
     'CSS',
@@ -37,13 +36,26 @@ export default {
   resumeDownloadUrl:
     'https://docs.google.com/document/d/1DuTTxyWvfNpXmj2qNrJnrkcUS2x6OG4cKsmsgyuTm-4/export?format=pdf',
   links: [
-    { name: 'Email', url: 'mailto:eric.furspan@gmail.com' },
-    { name: 'GitHub', url: 'https://github.com/ericfurspan' },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/eric-furspan/' },
-    { name: 'StackOverflow', url: 'https://stackoverflow.com/users/5792155/eric-furspan' },
+    { name: 'Email', url: 'mailto:eric.furspan@gmail.com', tooltipText: 'eric.furspan@gmail.com' },
+    {
+      name: 'GitHub',
+      url: 'https://github.com/ericfurspan',
+      tooltipText: 'github.com/ericfurspan',
+    },
+    {
+      name: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/eric-furspan/',
+      tooltipText: 'linkedin.com/in/eric-furspan/',
+    },
+    {
+      name: 'StackOverflow',
+      url: 'https://stackoverflow.com/users/5792155/eric-furspan?tab=topactivity',
+      tooltipText: 'StackOverflow',
+    },
     {
       name: 'daily.dev',
       url: 'https://app.daily.dev/ericfurspan',
+      tooltipText: 'app.daily.dev/ericfurspan',
       customIcon: true,
     },
     // { name: 'Codepen', url: 'https://codepen.io/ericfurspan' },

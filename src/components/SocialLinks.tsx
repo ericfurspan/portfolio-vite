@@ -38,11 +38,13 @@ type SocialLinks =
       name: keyof typeof faIconMap;
       url: string;
       customIcon?: never;
+      tooltipText: string;
     }[]
   | {
       name: keyof typeof customIconMap;
       url: string;
       customIcon: true;
+      tooltipText: string;
     }[];
 
 export interface SocialLinksProps {
@@ -55,9 +57,9 @@ const SocialLinks = ({ socialLinks = [], title }: SocialLinksProps) => (
     {title && <SectionHeader title={title} />}
 
     <Grid container spacing={2}>
-      {socialLinks.map(({ name, url, customIcon }) => (
+      {socialLinks.map(({ name, url, customIcon, tooltipText }) => (
         <Grid item key={name}>
-          <Tooltip title={name} arrow describeChild>
+          <Tooltip title={tooltipText} arrow describeChild>
             <IconButton
               href={url}
               target="_blank"

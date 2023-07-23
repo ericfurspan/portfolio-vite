@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 
 export interface ExpertiseProps {
   expertise: string[];
@@ -6,11 +6,13 @@ export interface ExpertiseProps {
 }
 
 const Expertise = ({ expertise }: ExpertiseProps) => (
-  <>
+  <Container>
     {expertise.map((expertise) => (
-      <Typography key={expertise}>{expertise}</Typography>
+      <Typography key={expertise} variant="subtitle2" fontWeight={300}>
+        {`- ${expertise}`}
+      </Typography>
     ))}
-  </>
+  </Container>
 );
 
 export default Expertise;
