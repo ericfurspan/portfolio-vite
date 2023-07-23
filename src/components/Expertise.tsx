@@ -1,16 +1,16 @@
-import { Container, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 
-interface Props {
+export interface ExpertiseProps {
   expertise: string[];
   title?: string;
 }
 
-const Expertise = ({ expertise }: Props) => (
-  <Container>
+const Expertise = ({ expertise }: ExpertiseProps) => (
+  <>
     {expertise.map((expertise) => (
       <Typography key={expertise}>{expertise}</Typography>
     ))}
-  </Container>
+  </>
 );
 
 export default Expertise;

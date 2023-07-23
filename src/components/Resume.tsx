@@ -1,6 +1,6 @@
 import { Button, Link, Stack } from '@mui/material';
 import { Download as DownloadIcon } from '@mui/icons-material';
-import { SectionHeader } from '.';
+import { SectionHeader } from './common';
 import appConfig from '../config';
 
 interface Props {

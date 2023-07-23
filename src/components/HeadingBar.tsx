@@ -7,12 +7,12 @@ const HeadingBar = () => (
     <Toolbar>
       <Stack sx={{ flexGrow: 1 }}>
         <Typography
-          variant="h6"
+          variant="h5"
           component="h1"
           noWrap
           sx={{
             mr: 2,
-            fontFamily: "'Raleway Variable', sans-serif",
+            fontFamily: 'fontFamilyRaleway',
             fontWeight: 800,
             letterSpacing: '0.1rem',
             textTransform: 'uppercase',

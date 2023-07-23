@@ -9,11 +9,12 @@ import {
   Chip,
   Stack,
   ButtonGroup,
+  Divider,
 } from '@mui/material';
 import { Launch as LaunchIcon, GitHub as GitHubIcon } from '@mui/icons-material';
-import { SectionHeader } from '.';
+import { SectionHeader } from './common';
 
-interface Props {
+export interface ProjectsProps {
   projects: {
     title: string;
     subtitle?: string;
@@ -25,7 +26,7 @@ interface Props {
   title?: string;
 }
 
-const Projects = ({ projects = [], title }: Props) => (
+const Projects = ({ projects = [], title }: ProjectsProps) => (
   <Stack direction="column">
     {title && <SectionHeader title={title} />}
 
@@ -40,8 +41,11 @@ const Projects = ({ projects = [], title }: Props) => (
               image={imageUrl}
               title={title}
             />
+
+            <Divider variant="middle" light sx={{ my: 2 }} />
+
             <CardContent>
-              <Typography gutterBottom variant="h5">
+              <Typography gutterBottom variant="h6" component="h3" fontWeight={400}>
                 {title}
               </Typography>
 
@@ -83,7 +87,7 @@ const Projects = ({ projects = [], title }: Props) => (
                     href={sourceUrl}
                     target="_blank"
                     color="inherit"
-                    variant="text"
+                    variant="contained"
                     rel="noreferrer noopener"
                     endIcon={<GitHubIcon />}
                   >

@@ -1,5 +1,5 @@
 import { createElement } from 'react';
-import { Grid, IconButton, Stack, Tooltip, createSvgIcon } from '@mui/material';
+import { Grid, IconButton, Stack, createSvgIcon } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faStackOverflow,
@@ -8,7 +8,7 @@ import {
   faCodepen,
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { SectionHeader } from '.';
+import { SectionHeader, Tooltip } from './common';
 
 const DailyDevIcon = createSvgIcon(
   <svg viewBox="0 0 256 144" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
@@ -22,15 +22,15 @@ const DailyDevIcon = createSvgIcon(
 );
 
 const faIconMap = {
-  email: faEnvelope,
-  github: faGithub,
-  linkedin: faLinkedinIn,
-  stackoverflow: faStackOverflow,
-  codepen: faCodepen,
+  Email: faEnvelope,
+  GitHub: faGithub,
+  LinkedIn: faLinkedinIn,
+  StackOverflow: faStackOverflow,
+  Codepen: faCodepen,
 };
 
 const customIconMap = {
-  dailydev: DailyDevIcon,
+  ['daily.dev']: DailyDevIcon,
 };
 
 type SocialLinks =
@@ -45,19 +45,19 @@ type SocialLinks =
       customIcon: true;
     }[];
 
-interface Props {
+export interface SocialLinksProps {
   socialLinks: SocialLinks;
   title?: string;
 }
 
-const SocialLinks = ({ socialLinks = [], title }: Props) => (
+const SocialLinks = ({ socialLinks = [], title }: SocialLinksProps) => (
   <Stack direction="column" alignSelf="center">
     {title && <SectionHeader title={title} />}
 
     <Grid container spacing={2}>
       {socialLinks.map(({ name, url, customIcon }) => (
         <Grid item key={name}>
-          <Tooltip title={name.toUpperCase()} arrow describeChild>
+          <Tooltip title={name} arrow describeChild>
             <IconButton
               href={url}
               target="_blank"

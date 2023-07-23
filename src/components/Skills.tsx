@@ -1,12 +1,12 @@
 import { Chip, Grid, Stack } from '@mui/material';
 import SectionHeader from './common/SectionHeader';
 
-interface Props {
+export interface SkillsProps {
   skills: string[];
   title?: string;
 }
 
-const Skills = ({ skills = [], title }: Props) => (
+const Skills = ({ skills = [], title }: SkillsProps) => (
   <Stack direction="column">
     {title && <SectionHeader title={title} />}
 
