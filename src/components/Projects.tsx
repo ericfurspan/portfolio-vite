@@ -32,11 +32,11 @@ const Projects = ({ projects = [], title }: ProjectsProps) => (
     <Grid container spacing={3}>
       {projects.map(({ title, subtitle, tools, imageUrl, liveUrl, sourceUrl }) => (
         <Grid item xs={12} md={6} key={title}>
-          <Card variant="outlined" sx={{ p: 2, height: '100%' }}>
+          <Card variant="outlined" sx={{ p: 0.8, height: '100%' }}>
             <CardMedia
               component="img"
-              height="110"
-              sx={{ objectFit: 'contain', objectPosition: 'center top' }}
+              height="100"
+              sx={{ objectFit: 'contain', objectPosition: '50% 50%' }}
               image={imageUrl}
               title={title}
             />
