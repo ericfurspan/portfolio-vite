@@ -9,7 +9,7 @@ const SectionHeader = ({ title }: Props) => (
     variant="subtitle2"
     component="h2"
     fontWeight={700}
-    sx={{ textTransform: 'uppercase', mb: 3 }}
+    sx={{ textTransform: 'uppercase', mb: 3, alignSelf: 'center' }}
   >
     {title}
   </Typography>
