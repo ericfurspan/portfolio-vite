@@ -1,4 +1,4 @@
-import { Container, Divider, Stack } from '@mui/material';
+import { Box, Container, Divider, Stack } from '@mui/material';
 import { HeadingBar, About, Skills, SocialLinks, Projects, Resume, Expertise } from './components';
 import { ToggleColorMode } from './components/common';
 import { SocialLinksProps } from './components/SocialLinks';
@@ -28,18 +28,16 @@ const App = () => {
         </Container>
 
         <SocialLinks socialLinks={links} />
-        <Divider variant="fullWidth" light sx={{ my: 2 }} />
+        <Divider variant="fullWidth" light />
 
         <Skills title="Toolset" skills={skills} />
-        <Divider variant="fullWidth" light sx={{ my: 2 }} />
+        <Divider variant="fullWidth" light />
 
         <Projects title="Projects" projects={projects} />
-        <Divider variant="fullWidth" light sx={{ my: 2 }} />
+        <Divider variant="fullWidth" light />
 
         <Resume title="Résumé" />
       </Stack>
-
-      <ToggleColorMode />
     </Container>
   );
 };
