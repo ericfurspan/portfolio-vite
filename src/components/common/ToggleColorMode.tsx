@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { LightMode as LightModeIcon, DarkMode as DarkModeIcon } from '@mui/icons-material';
 import { IconButton, useTheme } from '@mui/material';
 import { ColorModeContext } from '../../theme';
+import { Tooltip } from '.';
 
 const ToggleColorMode = () => {
   const toggleColorMode = useContext(ColorModeContext);
@@ -10,18 +11,25 @@ const ToggleColorMode = () => {
   } = useTheme();
 
   return (
-    <IconButton
-      aria-label="Toggle color mode"
-      onClick={toggleColorMode}
-      size="large"
-      color="default"
+    <Tooltip
+      title={`Toggle ${mode === 'dark' ? 'light' : 'dark'} mode`}
+      placement="left"
+      arrow
+      describeChild
     >
-      {mode === 'light' ? (
-        <DarkModeIcon fontSize="inherit" />
-      ) : (
-        <LightModeIcon fontSize="inherit" />
-      )}
-    </IconButton>
+      <IconButton
+        aria-label="Toggle color mode"
+        onClick={toggleColorMode}
+        size="large"
+        color="default"
+      >
+        {mode === 'light' ? (
+          <DarkModeIcon fontSize="inherit" />
+        ) : (
+          <LightModeIcon fontSize="inherit" />
+        )}
+      </IconButton>
+    </Tooltip>
   );
 };
 

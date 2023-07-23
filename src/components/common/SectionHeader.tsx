@@ -5,17 +5,12 @@ interface Props {
 }
 
 const SectionHeader = ({ title }: Props) => (
-  <Stack spacing={2} mb={4} alignItems="center" id={title}>
-    <Typography
-      variant="subtitle2"
-      component="h2"
-      fontWeight={700}
-      sx={{ textTransform: 'uppercase' }}
-    >
+  <Stack spacing={1.5} mb={4} alignItems="center" id={title}>
+    <Typography variant="subtitle2" component="h2" sx={{ textTransform: 'uppercase' }}>
       {title}
     </Typography>
 
-    <Divider sx={{ maxWidth: 75, width: '100%', borderColor: 'info.dark', borderWidth: '2px' }} />
+    <Divider sx={{ maxWidth: 70, width: '100%', borderColor: 'info.dark', borderWidth: '1px' }} />
   </Stack>
 );
 
