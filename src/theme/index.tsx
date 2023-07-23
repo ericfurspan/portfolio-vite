@@ -1,40 +1,39 @@
-import { ReactNode, createContext, useMemo, useState } from 'react';
+import { ReactNode, createContext, useCallback, useMemo, useState } from 'react';
 import {
   createTheme,
   CssBaseline,
   ThemeProvider as MuiThemeProvider,
   Palette,
+  useMediaQuery,
 } from '@mui/material';
 import palette from './palette';
 import typography from './typography';
-
-const DEFAULT_MODE: Palette['mode'] = 'light';
+import components from './components';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
-export const ColorModeContext = createContext({ toggleColorMode: () => {} });
+export const ColorModeContext = createContext(() => {});
 
 function ThemeProvider({ children }: { children: ReactNode }) {
-  const [mode, setMode] = useState(DEFAULT_MODE);
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const [mode, setMode] = useState<Palette['mode']>(prefersDarkMode ? 'dark' : 'light');
 
-  // todo: better done as useCallback i.e toggleColorMode ?
-  const colorMode = useMemo(
-    () => ({
-      toggleColorMode: () => setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light')),
-    }),
+  const toggleColorMode = useCallback(
+    () => setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light')),
     [],
   );
 
   const theme = useMemo(
     () =>
       createTheme({
-        typography,
         palette: palette[mode],
+        typography,
+        components,
       }),
     [mode],
   );
 
   return (
-    <ColorModeContext.Provider value={colorMode}>
+    <ColorModeContext.Provider value={toggleColorMode}>
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
         {children}

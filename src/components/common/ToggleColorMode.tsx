@@ -4,14 +4,23 @@ import { IconButton, useTheme } from '@mui/material';
 import { ColorModeContext } from '../../theme';
 
 const ToggleColorMode = () => {
-  const { toggleColorMode } = useContext(ColorModeContext);
+  const toggleColorMode = useContext(ColorModeContext);
   const {
     palette: { mode },
   } = useTheme();
 
   return (
-    <IconButton onClick={toggleColorMode} aria-label="Toggle color mode">
-      {mode === 'light' ? <DarkModeIcon /> : <LightModeIcon />}
+    <IconButton
+      aria-label="Toggle color mode"
+      onClick={toggleColorMode}
+      size="large"
+      color="default"
+    >
+      {mode === 'light' ? (
+        <DarkModeIcon fontSize="inherit" />
+      ) : (
+        <LightModeIcon fontSize="inherit" />
+      )}
     </IconButton>
   );
 };

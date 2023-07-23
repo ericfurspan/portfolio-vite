@@ -8,7 +8,6 @@ import {
   Button,
   Chip,
   Stack,
-  ButtonGroup,
   Divider,
 } from '@mui/material';
 import { Launch as LaunchIcon, GitHub as GitHubIcon } from '@mui/icons-material';
@@ -38,7 +37,7 @@ const Projects = ({ projects = [], title }: ProjectsProps) => (
               component="img"
               height="110"
               sx={{ objectFit: 'contain', objectPosition: 'center top' }}
-              image={imageUrl}
+              image={new URL(imageUrl, import.meta.url).href}
               title={title}
             />
 
@@ -58,43 +57,43 @@ const Projects = ({ projects = [], title }: ProjectsProps) => (
               <Grid container spacing={1} mt={1}>
                 {tools.map((tool) => (
                   <Grid item key={tool}>
-                    <Chip size="small" color="default" variant="filled" label={tool} />
+                    <Chip size="small" color="default" variant="outlined" label={tool} />
                   </Grid>
                 ))}
               </Grid>
             </CardContent>
 
             <CardActions sx={{ mt: 2 }}>
-              <ButtonGroup
+              <Button
+                href={liveUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+                variant="contained"
+                color="primary"
                 size="small"
-                aria-label={`${title} project links`}
+                endIcon={<LaunchIcon />}
                 fullWidth
                 disableElevation
               >
+                Open
+              </Button>
+
+              {sourceUrl && (
                 <Button
-                  href={liveUrl}
+                  href={sourceUrl}
                   target="_blank"
                   rel="noreferrer noopener"
-                  variant="contained"
-                  color="primary"
-                  endIcon={<LaunchIcon />}
+                  variant="outlined"
+                  color="inherit"
+                  size="small"
+                  endIcon={<GitHubIcon />}
+                  fullWidth
+                  disableElevation
                 >
-                  Open
+                  View Source
                 </Button>
-
-                {sourceUrl && (
-                  <Button
-                    href={sourceUrl}
-                    target="_blank"
-                    color="inherit"
-                    variant="contained"
-                    rel="noreferrer noopener"
-                    endIcon={<GitHubIcon />}
-                  >
-                    View Source
-                  </Button>
-                )}
-              </ButtonGroup>
+              )}
+              {/* </ButtonGroup> */}
             </CardActions>
           </Card>
         </Grid>

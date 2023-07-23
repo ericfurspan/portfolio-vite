@@ -471,6 +471,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource-variable/raleway/-/raleway-5.0.6.tgz#105bfdb1d66614dab2a4921ca1a73e73ea41da68"
   integrity sha512-EpSTgT0b+RlqZAjz0ExSlrIGWV5Av5L2B9zYK6MDCvNSltJi1fOnsMvbAnXuImv28EzPbSyb0aZ/4kn2fYrnzg==
 
+"@fontsource-variable/rubik@^5.0.7":
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/rubik/-/rubik-5.0.7.tgz#708c4088df6747d431b97db8164196507a1ce1e7"
+  integrity sha512-vxJfk+iQg0ojkx0r/3lYdr+bfYod+mOuyREapIIz1mxrOmC1ghG76wwQmuhvM0BKsvqbPDECy+GlHhta3mfljw==
+
 "@fontsource/comic-neue@^5.0.5":
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/@fontsource/comic-neue/-/comic-neue-5.0.5.tgz#ac69b2d14f2077cc326fda68ff8dc7f0bf769299"

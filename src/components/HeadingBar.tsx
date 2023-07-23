@@ -1,6 +1,7 @@
-import { AppBar as MuiAppBar, Toolbar, Typography, Stack } from '@mui/material';
-import ToggleColorMode from './common/ToggleColorMode';
+import { AppBar as MuiAppBar, Toolbar, Typography, Stack, Box, Button } from '@mui/material';
 import appConfig from '../config';
+
+const navItems = ['Projects', 'Contact'];
 
 const StyledTypography = ({ text }: { text: string }) => (
   <Typography
@@ -9,8 +10,6 @@ const StyledTypography = ({ text }: { text: string }) => (
     noWrap
     sx={{
       fontFamily: 'fontFamilyRaleway',
-      fontWeight: 800,
-      letterSpacing: '0.1rem',
       textTransform: 'uppercase',
     }}
   >
@@ -19,12 +18,19 @@ const StyledTypography = ({ text }: { text: string }) => (
 );
 
 const HeadingBar = () => (
-  <MuiAppBar position="static" color="transparent" elevation={0} sx={{ marginBottom: 6 }}>
+  <MuiAppBar position="static" color="transparent" elevation={0} sx={{ marginBottom: 4 }}>
     <Toolbar>
       <Stack direction="row" alignItems="center" sx={{ flexGrow: 1 }}>
         <StyledTypography text={appConfig.name} />
       </Stack>
-      <ToggleColorMode />
+
+      <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+        {navItems.map((item) => (
+          <Button key={item} href={`#${item}`} color="inherit" sx={{ ml: 2 }}>
+            {item}
+          </Button>
+        ))}
+      </Box>
     </Toolbar>
   </MuiAppBar>
 );

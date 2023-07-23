@@ -18,7 +18,7 @@ const SECONDARY = {
 
 const GREY = {
   0: '#FFFFFF',
-  100: '#F9FAFB',
+  100: '#F6F9FC',
   200: '#F4F6F8',
   300: '#DFE3E8',
   400: '#C4CDD5',
@@ -26,7 +26,7 @@ const GREY = {
   600: '#637381',
   700: '#454F5B',
   800: '#212B36',
-  900: '#121212',
+  900: '#141A1F',
   500_8: alpha('#919EAB', 0.08),
   500_12: alpha('#919EAB', 0.12),
   500_16: alpha('#919EAB', 0.16),
@@ -56,7 +56,7 @@ const palette = {
   light: {
     ...COMMON,
     mode: 'light',
-    text: { primary: GREY[800], secondary: GREY[600], disabled: GREY[500] },
+    text: { primary: GREY[900], secondary: GREY[600], disabled: GREY[500] },
     background: { paper: GREY[0], default: GREY[100], neutral: GREY[200] },
     action: { active: GREY[600], ...COMMON.action },
   },
