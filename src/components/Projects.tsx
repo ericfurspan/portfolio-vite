@@ -9,9 +9,11 @@ import {
   Chip,
   Stack,
   Divider,
+  Box,
 } from '@mui/material';
 import { Launch as LaunchIcon, GitHub as GitHubIcon } from '@mui/icons-material';
 import { SectionHeader } from './common';
+import { Chips } from '.';
 
 export interface ProjectsProps {
   projects: {
@@ -19,7 +21,7 @@ export interface ProjectsProps {
     subtitle?: string;
     liveUrl: string;
     sourceUrl: string;
-    imageUrl: string;
+    imgUrl: string;
     tools: string[];
   }[];
   title?: string;
@@ -29,22 +31,28 @@ const Projects = ({ projects = [], title }: ProjectsProps) => (
   <Stack direction="column">
     {title && <SectionHeader title={title} />}
 
-    <Grid container spacing={3}>
-      {projects.map(({ title, subtitle, tools, imageUrl, liveUrl, sourceUrl }) => (
+    <Grid container spacing={4}>
+      {projects.map(({ title, subtitle, tools, imgUrl, liveUrl, sourceUrl }) => (
         <Grid item xs={12} md={6} key={title}>
-          <Card variant="outlined" sx={{ px: 0.75, py: 2, height: '100%' }}>
-            <CardMedia
-              component="img"
-              height="100"
-              sx={{ objectFit: 'contain', objectPosition: '50% 50%' }}
-              image={imageUrl}
-              title={title}
-            />
-
-            <Divider variant="middle" light sx={{ my: 2 }} />
+          <Card
+            component={Stack}
+            justifyContent="space-between"
+            variant="outlined"
+            sx={{ px: 0.75, py: 2 }}
+          >
+            <Box>
+              <CardMedia
+                component="img"
+                height="150"
+                sx={{ objectFit: 'contain', objectPosition: '50% 50%' }}
+                image={imgUrl}
+                title={title}
+              />
+              <Divider variant="middle" light sx={{ mt: 2 }} />
+            </Box>
 
             <CardContent>
-              <Typography gutterBottom variant="h6" component="h3" fontWeight={400}>
+              <Typography gutterBottom variant="h6" component="h3">
                 {title}
               </Typography>
 
@@ -54,16 +62,12 @@ const Projects = ({ projects = [], title }: ProjectsProps) => (
                 </Typography>
               )}
 
-              <Grid container spacing={1} mt={1}>
-                {tools.map((tool) => (
-                  <Grid item key={tool}>
-                    <Chip size="small" color="default" variant="outlined" label={tool} />
-                  </Grid>
-                ))}
-              </Grid>
+              <Box height={120} overflow="auto" mt={3}>
+                {tools.length ? <Chips chips={tools} /> : null}
+              </Box>
             </CardContent>
 
-            <CardActions sx={{ mt: 2 }}>
+            <CardActions>
               <Button
                 href={liveUrl}
                 target="_blank"
@@ -93,7 +97,6 @@ const Projects = ({ projects = [], title }: ProjectsProps) => (
                   View Source
                 </Button>
               )}
-              {/* </ButtonGroup> */}
             </CardActions>
           </Card>
         </Grid>

@@ -2,6 +2,7 @@ import { Box, Button, Link, Stack } from '@mui/material';
 import { Download as DownloadIcon } from '@mui/icons-material';
 import { SectionHeader } from './common';
 import appConfig from '../config';
+import ResumeDownloadBtn from './ResumeDownloadBtn';
 
 interface Props {
   title?: string;
@@ -23,6 +24,8 @@ const Resume = ({ title }: Props) => (
     >
       Download PDF
     </Button>
+
+    {/* <ResumeDownloadBtn /> */}
 
     <Box
       component="object"

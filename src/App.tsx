@@ -1,8 +1,8 @@
 import { Box, Container, Divider, Stack, Typography } from '@mui/material';
-import { HeadingBar, About, Skills, SocialLinks, Projects, Resume, Expertise } from './components';
+import { HeadingBar, About, Chips, SocialLinks, Projects, Resume, Expertise } from './components';
 import { SocialLinksProps } from './components/SocialLinks';
 import { ProjectsProps } from './components/Projects';
-import { SkillsProps } from './components/Skills';
+import { ChipsProps } from './components/Chips';
 import { ExpertiseProps } from './components/Expertise';
 import { ToggleColorMode } from './components/common';
 import appConfig from './config';
@@ -11,7 +11,7 @@ interface AppProps {
   name: string;
   links: SocialLinksProps['socialLinks'];
   projects: ProjectsProps['projects'];
-  skills: SkillsProps['skills'];
+  skills: ChipsProps['chips'];
   expertise: ExpertiseProps['expertise'];
 }
 
@@ -29,10 +29,10 @@ const App = () => {
             <Expertise expertise={expertise} />
           </Container>
 
-          <Skills skills={skills} />
+          <Chips chips={skills} justifyCenter />
           <Divider variant="fullWidth" light />
 
-          <Projects title="Projects" projects={projects} />
+          <Projects title="Projects & Open Source" projects={projects} />
           <Divider variant="fullWidth" light />
 
           <Resume title="Résumé" />
