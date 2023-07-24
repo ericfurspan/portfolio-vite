@@ -12,7 +12,7 @@ const ToggleColorMode = () => {
 
   return (
     <Tooltip
-      title={`Toggle ${mode === 'dark' ? 'light' : 'dark'} mode`}
+      title={`${mode === 'dark' ? 'Light' : 'Dark'} mode`}
       placement="left"
       arrow
       describeChild
