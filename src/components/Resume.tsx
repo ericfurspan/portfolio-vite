@@ -2,7 +2,7 @@ import { Box, Button, Link, Stack } from '@mui/material';
 import { Download as DownloadIcon } from '@mui/icons-material';
 import { SectionHeader } from './common';
 import appConfig from '../config';
-import ResumeDownloadBtn from './ResumeDownloadBtn';
+// import ResumeDownloadBtn from './ResumeDownloadBtn';
 
 interface Props {
   title?: string;
