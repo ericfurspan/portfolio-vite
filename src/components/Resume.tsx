@@ -1,4 +1,4 @@
-import { Button, Link, Stack } from '@mui/material';
+import { Box, Button, Link, Stack } from '@mui/material';
 import { Download as DownloadIcon } from '@mui/icons-material';
 import { SectionHeader } from './common';
 import appConfig from '../config';
@@ -19,21 +19,22 @@ const Resume = ({ title }: Props) => (
       color="info"
       size="medium"
       endIcon={<DownloadIcon />}
-      sx={{ alignSelf: 'end', mr: 3 }}
+      sx={{ alignSelf: { xs: 'flex-start', sm: 'flex-end' }, mr: { xs: 0, sm: 3 }, mb: 1 }}
     >
       Download PDF
     </Button>
 
-    <object
+    <Box
+      component="object"
       data={appConfig.resumeViewUrl}
       title={`${appConfig.name} Résumé`}
       width="100%"
-      height="1000px"
+      height={{ xs: '2000px', sm: '1000px' }}
     >
       Unable to load this document. Please try the&nbsp;
       <Link href={appConfig.resumeDownloadUrl}>download link</Link>
       &nbsp;instead.
-    </object>
+    </Box>
   </Stack>
 );
 

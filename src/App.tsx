@@ -22,7 +22,8 @@ const App = () => {
     <>
       <Container maxWidth="md" sx={{ paddingTop: 8, paddingBottom: 16 }}>
         <HeadingBar />
-        <Stack spacing={12} width="100%">
+
+        <Stack spacing={12}>
           <Container>
             <About />
             <Expertise expertise={expertise} />
