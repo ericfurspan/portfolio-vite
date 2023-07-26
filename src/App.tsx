@@ -1,5 +1,5 @@
 import { Box, Container, Divider, Stack, Typography } from '@mui/material';
-import { HeadingBar, About, Chips, SocialLinks, Projects, Resume, Expertise } from './components';
+import { HeadingBar, About, Chips, SocialLinks, Projects, Expertise } from './components';
 import { SocialLinksProps } from './components/SocialLinks';
 import { ProjectsProps } from './components/Projects';
 import { ChipsProps } from './components/Chips';
