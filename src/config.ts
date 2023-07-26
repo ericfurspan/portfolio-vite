@@ -30,6 +30,8 @@ export default {
     'MongoDB',
     'Git',
     'AWS',
+    'JIRA',
+    'Figma',
   ],
   resumeViewUrl:
     'https://docs.google.com/document/d/e/2PACX-1vRFYzxx4MwLb7-eZOtluuLsJn2yi6-IbryPkOfAKq3XjJIdSEfcQdAz_FPs7tpKJz3IVBQuJRLX0W1o/pub?embedded=true',

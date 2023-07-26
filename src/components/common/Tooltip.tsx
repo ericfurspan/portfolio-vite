@@ -4,7 +4,7 @@ const StyledTooltip = styled(({ className, ...props }: TooltipProps) => (
   <MuiTooltip {...props} classes={{ popper: className }} />
 ))(({ theme }) => ({
   [`& .${tooltipClasses.tooltip}`]: {
-    fontSize: theme.typography.pxToRem(13),
+    fontSize: theme.typography.pxToRem(12),
   },
 }));
 

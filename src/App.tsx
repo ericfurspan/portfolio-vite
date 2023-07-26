@@ -35,7 +35,7 @@ const App = () => {
           <Projects title="Projects & Open Source" projects={projects} />
           <Divider variant="fullWidth" light />
 
-          <Resume title="Résumé" />
+          {/* <Resume title="Résumé" /> */}
 
           <SocialLinks title="Contact" socialLinks={links} />
         </Stack>

@@ -11,7 +11,7 @@ import {
   Box,
 } from '@mui/material';
 import { Launch as LaunchIcon, GitHub as GitHubIcon } from '@mui/icons-material';
-import { SectionHeader } from './common';
+import { SectionHeader, Tooltip } from './common';
 import { Chips } from '.';
 
 export interface ProjectsProps {
@@ -25,6 +25,9 @@ export interface ProjectsProps {
   }[];
   title?: string;
 }
+
+const fallbackImageUrl =
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/800px-No-Image-Placeholder.svg.png';
 
 const Projects = ({ projects = [], title }: ProjectsProps) => (
   <Stack direction="column">
@@ -44,7 +47,7 @@ const Projects = ({ projects = [], title }: ProjectsProps) => (
                 component="img"
                 height="150"
                 sx={{ objectFit: 'contain', objectPosition: '50% 50%' }}
-                image={imgUrl}
+                image={imgUrl || fallbackImageUrl}
                 title={title}
               />
               <Divider variant="middle" light sx={{ mt: 2 }} />
@@ -67,34 +70,38 @@ const Projects = ({ projects = [], title }: ProjectsProps) => (
             </CardContent>
 
             <CardActions>
-              <Button
-                href={liveUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                variant="contained"
-                color="primary"
-                size="small"
-                endIcon={<LaunchIcon />}
-                fullWidth
-                disableElevation
-              >
-                Open
-              </Button>
-
-              {sourceUrl && (
+              <Tooltip title={liveUrl} placement="top" arrow describeChild>
                 <Button
-                  href={sourceUrl}
+                  href={liveUrl}
                   target="_blank"
                   rel="noreferrer noopener"
-                  variant="outlined"
-                  color="inherit"
+                  variant="contained"
+                  color="primary"
                   size="small"
-                  endIcon={<GitHubIcon />}
+                  endIcon={<LaunchIcon />}
                   fullWidth
                   disableElevation
                 >
-                  View Source
+                  Open
                 </Button>
+              </Tooltip>
+
+              {sourceUrl && (
+                <Tooltip title={sourceUrl} placement="top" arrow describeChild>
+                  <Button
+                    href={sourceUrl}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    variant="outlined"
+                    color="inherit"
+                    size="small"
+                    endIcon={<GitHubIcon />}
+                    fullWidth
+                    disableElevation
+                  >
+                    View Source
+                  </Button>
+                </Tooltip>
               )}
             </CardActions>
           </Card>
