@@ -21,6 +21,9 @@ const typography = {
     fontSize: '1.2rem',
     letterSpacing: '0.1rem',
   },
+  overline: {
+    fontSize: '0.7rem',
+  },
 };
 
 export default typography;

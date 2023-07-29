@@ -1,5 +1,5 @@
-import { Box, Container, Divider, Stack, Typography } from '@mui/material';
-import { HeadingBar, About, Chips, SocialLinks, Projects, Expertise } from './components';
+import { Box, Container, Divider, Stack } from '@mui/material';
+import { HeadingBar, About, Chips, SocialLinks, Projects, Expertise, Footer } from './components';
 import { SocialLinksProps } from './components/SocialLinks';
 import { ProjectsProps } from './components/Projects';
 import { ChipsProps } from './components/Chips';
@@ -45,9 +45,7 @@ const App = () => {
         </Box>
       </Container>
 
-      <Typography variant="overline" display="flex" justifyContent="center" p={1}>
-        Copyright {new Date().getFullYear()} © {name}
-      </Typography>
+      <Footer name={name} />
     </>
   );
 };
