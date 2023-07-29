@@ -74,9 +74,9 @@ const SocialLinks = ({ socialLinks = [], title }: SocialLinksProps) => (
               }}
             >
               {customIcon ? (
-                createElement(customIconMap[name])
+                createElement(customIconMap[name], { sx: { fontSize: '2.5rem' } })
               ) : (
-                <FontAwesomeIcon icon={faIconMap[name]} />
+                <FontAwesomeIcon icon={faIconMap[name]} fontSize="2.5rem" />
               )}
             </IconButton>
           </Tooltip>
