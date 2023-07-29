@@ -5,7 +5,7 @@ interface Props {
 }
 
 const SectionHeader = ({ title }: Props) => (
-  <Stack spacing={1.5} mb={6} alignItems="center" id={title}>
+  <Stack spacing={1.5} mb={6} alignItems="center" id={title.split(' ')[0]}>
     <Typography variant="subtitle2" component="h2" sx={{ textTransform: 'uppercase' }}>
       {title}
     </Typography>
