@@ -45,7 +45,7 @@ const Projects = ({ projects = [], title }: ProjectsProps) => (
             <Box>
               <CardMedia
                 component="img"
-                height="150"
+                height="125"
                 sx={{ objectFit: 'contain', objectPosition: '50% 50%' }}
                 image={imgUrl || missingImageUrl}
                 title={title}
@@ -64,7 +64,7 @@ const Projects = ({ projects = [], title }: ProjectsProps) => (
                 </Typography>
               )}
 
-              <Box height={120} overflow="auto" mt={3}>
+              <Box height={100} overflow="auto" mt={3}>
                 {tools.length ? <Chips chips={tools} /> : null}
               </Box>
             </CardContent>
