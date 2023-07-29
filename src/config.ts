@@ -1,6 +1,7 @@
 export default {
   name: 'Eric Furspan',
   title: 'Software Engineer',
+  email: 'eric.furspan@gmail.com',
   about: [
     'Software Engineer from New York, passionate about crafting engaging & intuitive user experiences on the web.',
   ],
@@ -38,7 +39,6 @@ export default {
   resumeDownloadUrl:
     'https://docs.google.com/document/d/1DuTTxyWvfNpXmj2qNrJnrkcUS2x6OG4cKsmsgyuTm-4/export?format=pdf',
   links: [
-    { name: 'Email', url: 'mailto:eric.furspan@gmail.com', tooltipText: 'eric.furspan@gmail.com' },
     {
       name: 'GitHub',
       url: 'https://github.com/ericfurspan',

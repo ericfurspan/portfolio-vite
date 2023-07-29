@@ -1,6 +1,6 @@
 import { Box, Container, Divider, Stack } from '@mui/material';
-import { HeadingBar, About, Chips, SocialLinks, Projects, Expertise, Footer } from './components';
-import { SocialLinksProps } from './components/SocialLinks';
+import { HeadingBar, About, Chips, Contact, Projects, Expertise, Footer } from './components';
+import { ContactProps } from './components/Contact';
 import { ProjectsProps } from './components/Projects';
 import { ChipsProps } from './components/Chips';
 import { ExpertiseProps } from './components/Expertise';
@@ -9,14 +9,15 @@ import appConfig from './config';
 
 interface AppProps {
   name: string;
-  links: SocialLinksProps['socialLinks'];
+  email: string;
+  links: ContactProps['socialLinks'];
   projects: ProjectsProps['projects'];
   skills: ChipsProps['chips'];
   expertise: ExpertiseProps['expertise'];
 }
 
 const App = () => {
-  const { name, links, projects, skills, expertise } = appConfig as AppProps;
+  const { name, email, links, projects, skills, expertise } = appConfig as AppProps;
 
   return (
     <>
@@ -37,7 +38,7 @@ const App = () => {
 
           {/* <Resume title="Résumé" /> */}
 
-          <SocialLinks title="Contact" socialLinks={links} />
+          <Contact title="Contact" socialLinks={links} email={email} />
         </Stack>
 
         <Box position="fixed" top={{ xs: '0.5rem', md: '1rem' }} right={{ xs: '1rem', md: '2rem' }}>

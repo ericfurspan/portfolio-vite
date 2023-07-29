@@ -1,5 +1,6 @@
 import { createElement } from 'react';
-import { Grid, IconButton, Stack, createSvgIcon } from '@mui/material';
+import { Button, Grid, IconButton, Stack, createSvgIcon } from '@mui/material';
+import { EmailOutlined } from '@mui/icons-material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faStackOverflow,
@@ -7,7 +8,6 @@ import {
   faLinkedinIn,
   faCodepen,
 } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { SectionHeader, Tooltip } from './common';
 
 const DailyDevIcon = createSvgIcon(
@@ -22,7 +22,6 @@ const DailyDevIcon = createSvgIcon(
 );
 
 const faIconMap = {
-  Email: faEnvelope,
   GitHub: faGithub,
   LinkedIn: faLinkedinIn,
   StackOverflow: faStackOverflow,
@@ -47,14 +46,30 @@ type SocialLinks =
       tooltipText: string;
     }[];
 
-export interface SocialLinksProps {
+export interface ContactProps {
   socialLinks: SocialLinks;
+  email?: string;
   title?: string;
 }
 
-const SocialLinks = ({ socialLinks = [], title }: SocialLinksProps) => (
+const Contact = ({ socialLinks = [], email, title }: ContactProps) => (
   <Stack direction="column" alignSelf="center">
     {title && <SectionHeader title={title} />}
+
+    {email && (
+      <Tooltip title={email} arrow describeChild>
+        <Button
+          variant="outlined"
+          color="inherit"
+          size="large"
+          href={`mailto:${email}`}
+          endIcon={<EmailOutlined />}
+          sx={{ mb: 5, alignSelf: 'center', borderRadius: '100px' }}
+        >
+          Email Me
+        </Button>
+      </Tooltip>
+    )}
 
     <Grid container spacing={2}>
       {socialLinks.map(({ name, url, customIcon, tooltipText }) => (
@@ -86,4 +101,4 @@ const SocialLinks = ({ socialLinks = [], title }: SocialLinksProps) => (
   </Stack>
 );
 
-export default SocialLinks;
+export default Contact;
