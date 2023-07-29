@@ -21,6 +21,7 @@ const ToggleColorMode = () => {
         aria-label="Toggle color mode"
         onClick={toggleColorMode}
         size="large"
+        sx={{ bgcolor: 'background.default' }}
         color="default"
       >
         {mode === 'light' ? (
