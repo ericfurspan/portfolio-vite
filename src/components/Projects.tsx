@@ -26,8 +26,8 @@ export interface ProjectsProps {
   title?: string;
 }
 
-const fallbackImageUrl =
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/800px-No-Image-Placeholder.svg.png';
+const missingImageUrl =
+  'https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg';
 
 const Projects = ({ projects = [], title }: ProjectsProps) => (
   <Stack direction="column">
@@ -47,7 +47,7 @@ const Projects = ({ projects = [], title }: ProjectsProps) => (
                 component="img"
                 height="150"
                 sx={{ objectFit: 'contain', objectPosition: '50% 50%' }}
-                image={imgUrl || fallbackImageUrl}
+                image={imgUrl || missingImageUrl}
                 title={title}
               />
               <Divider variant="middle" light sx={{ mt: 2 }} />
