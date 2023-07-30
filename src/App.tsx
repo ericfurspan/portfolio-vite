@@ -1,10 +1,9 @@
-import { Box, Container, Divider, Stack } from '@mui/material';
+import { Container, Divider, Stack } from '@mui/material';
 import { HeadingBar, About, Chips, Contact, Projects, Expertise, Footer } from './components';
 import { ContactProps } from './components/Contact';
 import { ProjectsProps } from './components/Projects';
 import { ChipsProps } from './components/Chips';
 import { ExpertiseProps } from './components/Expertise';
-import { ToggleColorMode } from './components/common';
 import appConfig from './config';
 
 interface AppProps {
@@ -40,10 +39,6 @@ const App = () => {
 
           <Contact title="Contact" socialLinks={links} email={email} />
         </Stack>
-
-        <Box position="fixed" top={{ xs: '0.5rem', md: '1rem' }} right={{ xs: '1rem', md: '2rem' }}>
-          <ToggleColorMode />
-        </Box>
       </Container>
 
       <Footer name={name} />

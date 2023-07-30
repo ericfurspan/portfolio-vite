@@ -1,13 +1,18 @@
-import { Typography } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
+import { ToggleColorMode } from './common';
 
 interface FooterProps {
   name: string;
 }
 
 const Footer = ({ name }: FooterProps) => (
-  <Typography variant="overline" display="flex" justifyContent="center" p={1}>
-    Copyright {new Date().getFullYear()} © {name}
-  </Typography>
+  <Stack direction="row" alignItems="center" justifyContent="center" spacing={4} p={1}>
+    <Typography variant="overline" display="flex" justifyContent="center">
+      Copyright {new Date().getFullYear()} © {name}
+    </Typography>
+
+    <ToggleColorMode />
+  </Stack>
 );
 
 export default Footer;
