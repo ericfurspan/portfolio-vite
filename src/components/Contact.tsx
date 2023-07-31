@@ -64,14 +64,14 @@ const Contact = ({ socialLinks = [], email, title }: ContactProps) => (
           size="large"
           href={`mailto:${email}`}
           endIcon={<EmailOutlined />}
-          sx={{ mb: 5, alignSelf: 'center', borderRadius: '100px' }}
+          sx={{ mb: 4, alignSelf: 'center' }}
         >
           Email Me
         </Button>
       </Tooltip>
     )}
 
-    <Grid container spacing={2}>
+    <Grid container spacing={3}>
       {socialLinks.map(({ name, url, customIcon, tooltipText }) => (
         <Grid item key={name}>
           <Tooltip title={tooltipText} arrow describeChild>
@@ -89,9 +89,9 @@ const Contact = ({ socialLinks = [], email, title }: ContactProps) => (
               }}
             >
               {customIcon ? (
-                createElement(customIconMap[name], { sx: { fontSize: '2.5rem' } })
+                createElement(customIconMap[name], { sx: { fontSize: '2rem' } })
               ) : (
-                <FontAwesomeIcon icon={faIconMap[name]} fontSize="2.5rem" />
+                <FontAwesomeIcon icon={faIconMap[name]} fontSize="2rem" />
               )}
             </IconButton>
           </Tooltip>

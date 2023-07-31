@@ -46,7 +46,7 @@ const Projects = ({ projects = [], title }: ProjectsProps) => (
               <CardMedia
                 component="img"
                 height="125"
-                sx={{ objectFit: 'contain', objectPosition: '50% 50%' }}
+                sx={{ objectFit: 'contain', objectPosition: '50% 50%', opacity: !imgUrl ? 0.5 : 1 }}
                 image={imgUrl || missingImageUrl}
                 title={title}
               />
@@ -70,21 +70,23 @@ const Projects = ({ projects = [], title }: ProjectsProps) => (
             </CardContent>
 
             <CardActions>
-              <Tooltip title={liveUrl} placement="top" arrow describeChild>
-                <Button
-                  href={liveUrl}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  variant="contained"
-                  color="primary"
-                  size="small"
-                  endIcon={<LaunchIcon />}
-                  fullWidth
-                  disableElevation
-                >
-                  Open
-                </Button>
-              </Tooltip>
+              {liveUrl && (
+                <Tooltip title={liveUrl} placement="top" arrow describeChild>
+                  <Button
+                    href={liveUrl}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    variant="contained"
+                    color="primary"
+                    size="small"
+                    endIcon={<LaunchIcon />}
+                    fullWidth
+                    disableElevation
+                  >
+                    Open
+                  </Button>
+                </Tooltip>
+              )}
 
               {sourceUrl && (
                 <Tooltip title={sourceUrl} placement="top" arrow describeChild>
