@@ -96,21 +96,23 @@ export default {
       // imgUrl: '/ef-logo.png',
       tools: ['react', 'typescript', 'material-ui', 'vitejs'],
     },
-    // {
-    //   title: '',
-    //   subtitle: '',
-    //   liveUrl: '',
-    //   sourceUrl: '',
-    //   imgUrl: '',
-    //   tools: '',
-    // },
-    // {
-    //   title: '',
-    //   subtitle: '',
-    //   liveUrl: '',
-    //   sourceUrl: '',
-    //   imgUrl: '',
-    //   tools: ['react'],
-    // },
+    {
+      title: 'Stock Metrics Endpoint',
+      subtitle:
+        'A serverless function wrapper around the Alpha Vantage API. Returns real-time stock market data.',
+      liveUrl: '',
+      sourceUrl: 'https://github.com/ericfurspan/portfolio-metrics-api',
+      imgUrl: '',
+      tools: ['nodejs', 'javascript', 'netlify', 'alphavantage'],
+    },
+    {
+      title: 'Documentation',
+      subtitle:
+        'A personal curation of notes, guides, & best-practices on various software development topics.',
+      liveUrl: 'https://ericfurspan.github.io/docs/',
+      sourceUrl: 'https://github.com/ericfurspan/docs',
+      imgUrl: '',
+      tools: ['github-pages', 'markdown'],
+    },
   ],
 };
