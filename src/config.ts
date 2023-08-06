@@ -65,7 +65,7 @@ export default {
   projects: [
     {
       title: 'Ticker Lookup',
-      subtitle: 'A serverless function returning real-time market data for any stock.',
+      subtitle: 'Easily look up key financial data for any stock.',
       liveUrl: 'https://ticker-lookup.netlify.app/.netlify/functions/lookup',
       sourceUrl: 'https://github.com/ericfurspan/ticker-lookup',
       imgUrl: '',
