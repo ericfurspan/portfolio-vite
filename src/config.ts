@@ -3,7 +3,7 @@ export default {
   title: 'Software Engineer',
   email: 'eric.furspan@gmail.com',
   about: [
-    'Software Engineer from New York, passionate about crafting engaging & intuitive user experiences on the web.',
+    'Software Engineer based in New York. Passionate about crafting engaging & intuitive user experiences on the web.',
   ],
   expertise: [
     'Designing, developing, and planning React applications.',
@@ -64,6 +64,14 @@ export default {
   ],
   projects: [
     {
+      title: 'Ticker Lookup',
+      subtitle: 'A serverless function returning real-time market data for any stock.',
+      liveUrl: 'https://ticker-lookup.netlify.app/.netlify/functions/lookup',
+      sourceUrl: 'https://github.com/ericfurspan/ticker-lookup',
+      imgUrl: '',
+      tools: ['nodejs', 'typescript', 'netlify', 'alphavantage'],
+    },
+    {
       title: 'Local Hoops',
       subtitle: 'Find basketball courts, anywhere.',
       liveUrl: 'https://apps.apple.com/us/app/local-hoops/id1452756521',
@@ -95,15 +103,6 @@ export default {
       sourceUrl: 'https://github.com/ericfurspan/portfolio-vite',
       // imgUrl: '/ef-logo.png',
       tools: ['react', 'typescript', 'material-ui', 'vitejs'],
-    },
-    {
-      title: 'Stock Metrics Endpoint',
-      subtitle:
-        'A serverless function wrapper around the Alpha Vantage API. Returns real-time stock market data.',
-      liveUrl: '',
-      sourceUrl: 'https://github.com/ericfurspan/portfolio-metrics-api',
-      imgUrl: '',
-      tools: ['nodejs', 'javascript', 'netlify', 'alphavantage'],
     },
     {
       title: 'Documentation',
