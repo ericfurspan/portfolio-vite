@@ -84,7 +84,7 @@ export default {
       subtitle: 'Giving First Responders a place to feel, heal & thrive.',
       liveUrl: 'https://repsforresponders.org',
       sourceUrl: 'https://github.com/ericfurspan/rfr',
-      imgUrl: '/rfr.png',
+      imgUrl: '/rfr-logo.webp',
       tools: ['react', 'javascript', 'chakra-ui', 'gatsbyjs'],
     },
     {
