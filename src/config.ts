@@ -60,7 +60,6 @@ export default {
       tooltipText: 'app.daily.dev/ericfurspan',
       customIcon: true,
     },
-    // { name: 'Codepen', url: 'https://codepen.io/ericfurspan' },
   ],
   projects: [
     {
@@ -91,7 +90,7 @@ export default {
       title: 'Local Hoops Map',
       subtitle: 'Never Stop Searching For That Perfect Hoop.',
       liveUrl: 'https://local-hoops.com/pages/map',
-      sourceUrl: '', // https://www.linkedin.com/company/localhoops1
+      sourceUrl: '',
       imgUrl:
         'https://cdn.sanity.io/images/vb687n4o/production/d799d870e76a27e388bf24146f4914ce15547acd-1569x1056.svg',
       tools: ['react', 'javascript', 'chakra-ui'],
@@ -101,17 +100,8 @@ export default {
       subtitle: 'This website.',
       liveUrl: 'https://ericfurspan.com/',
       sourceUrl: 'https://github.com/ericfurspan/portfolio-vite',
-      // imgUrl: '/ef-logo.png',
+      imgUrl: '',
       tools: ['react', 'typescript', 'material-ui', 'vitejs'],
     },
-    // {
-    //   title: 'Documentation',
-    //   subtitle:
-    //     'A personal curation of notes, guides, & best-practices on various software development topics.',
-    //   liveUrl: 'https://ericfurspan.github.io/docs/',
-    //   sourceUrl: 'https://github.com/ericfurspan/docs',
-    //   imgUrl: '',
-    //   tools: ['github-pages', 'markdown'],
-    // },
   ],
 };
