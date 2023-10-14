@@ -64,7 +64,7 @@ export default {
   projects: [
     {
       title: 'Local Hoops | Knicks Map',
-      subtitle: 'Find a court. Get a bucket. Film your bucket. Upload it the map.',
+      subtitle: 'Find a court. Get a bucket. Film your bucket. Upload it to the map.',
       liveUrl: 'https://www.nba.com/knicks/new-york-hoops',
       sourceUrl: undefined,
       imgUrl:
