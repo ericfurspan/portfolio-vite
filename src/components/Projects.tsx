@@ -35,11 +35,12 @@ const Projects = ({ projects = [], title }: ProjectsProps) => (
 
     <Grid container spacing={4}>
       {projects.map(({ title, subtitle, tools, imgUrl, liveUrl, sourceUrl }) => (
-        <Grid item xs={12} md={6} key={title}>
+        <Grid container item xs={12} md={6} key={title}>
           <Card
             component={Stack}
             justifyContent="space-between"
             variant="outlined"
+            width={'100%'}
             sx={{ px: 0.75, py: 2 }}
           >
             <Box>
@@ -88,23 +89,22 @@ const Projects = ({ projects = [], title }: ProjectsProps) => (
                 </Tooltip>
               )}
 
-              {sourceUrl && (
-                <Tooltip title={sourceUrl} placement="top" arrow describeChild>
-                  <Button
-                    href={sourceUrl}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    variant="outlined"
-                    color="inherit"
-                    size="small"
-                    endIcon={<GitHubIcon />}
-                    fullWidth
-                    disableElevation
-                  >
-                    View Source
-                  </Button>
-                </Tooltip>
-              )}
+              <Tooltip title={sourceUrl} placement="top" arrow describeChild>
+                <Button
+                  href={sourceUrl ?? '#'}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  variant="outlined"
+                  color="inherit"
+                  size="small"
+                  endIcon={<GitHubIcon />}
+                  disabled={!sourceUrl}
+                  fullWidth
+                  disableElevation
+                >
+                  View Source
+                </Button>
+              </Tooltip>
             </CardActions>
           </Card>
         </Grid>

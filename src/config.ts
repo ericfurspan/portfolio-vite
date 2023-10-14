@@ -63,6 +63,15 @@ export default {
   ],
   projects: [
     {
+      title: 'Local Hoops | Knicks Map',
+      subtitle: 'Find a court. Get a bucket. Film your bucket. Upload it the map.',
+      liveUrl: 'https://www.nba.com/knicks/new-york-hoops',
+      sourceUrl: undefined,
+      imgUrl:
+        'https://localhoops-knicks-map.web.app/static/media/knicks-logo-400px.84565b1e6111372bed1c.png',
+      tools: ['react', 'javascript', 'firebase', 'chakra-ui'],
+    },
+    {
       title: 'Ticker Lookup',
       subtitle: 'Easily look up key financial data for any stock.',
       liveUrl: 'https://ticker-lookup.netlify.app/.netlify/functions/lookup',
@@ -71,7 +80,7 @@ export default {
       tools: ['nodejs', 'typescript', 'netlify', 'alphavantage'],
     },
     {
-      title: 'Local Hoops',
+      title: 'Local Hoops iOS',
       subtitle: 'Find basketball courts, anywhere.',
       liveUrl: 'https://apps.apple.com/us/app/local-hoops/id1452756521',
       sourceUrl: 'https://github.com/ericfurspan/Local-Hoops',
@@ -85,15 +94,6 @@ export default {
       sourceUrl: 'https://github.com/ericfurspan/rfr',
       imgUrl: '/rfr-logo.webp',
       tools: ['react', 'javascript', 'chakra-ui', 'gatsbyjs'],
-    },
-    {
-      title: 'Local Hoops Map',
-      subtitle: 'Never Stop Searching For That Perfect Hoop.',
-      liveUrl: 'https://local-hoops.com/pages/map',
-      sourceUrl: '',
-      imgUrl:
-        'https://cdn.sanity.io/images/vb687n4o/production/d799d870e76a27e388bf24146f4914ce15547acd-1569x1056.svg',
-      tools: ['react', 'javascript', 'chakra-ui'],
     },
     {
       title: 'Personal Page',
