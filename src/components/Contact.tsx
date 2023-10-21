@@ -64,9 +64,9 @@ const Contact = ({ socialLinks = [], email, title }: ContactProps) => (
           size="large"
           href={`mailto:${email}`}
           endIcon={<EmailOutlined />}
-          sx={{ mb: 8, alignSelf: 'center' }}
+          sx={{ mb: 6, alignSelf: 'center' }}
         >
-          Email
+          E-mail
         </Button>
       </Tooltip>
     )}

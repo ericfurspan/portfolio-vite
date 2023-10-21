@@ -26,15 +26,12 @@ const App = () => {
         <Stack spacing={12}>
           <Container>
             <About />
-            <br />
-
-            {/* <Expertise expertise={expertise} /> */}
-            <Chips chips={skills} justifyCenter />
           </Container>
 
+          <Projects title="Projects & Open Source" projects={projects} />
           <Divider variant="fullWidth" light />
 
-          <Projects title="Projects & Open Source" projects={projects} />
+          <Chips title="Skills" chips={skills} justifyCenter />
           <Divider variant="fullWidth" light />
 
           <Contact title="Contact" socialLinks={socialLinks} email={email} />
