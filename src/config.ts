@@ -3,7 +3,8 @@ export default {
   title: 'Software Engineer',
   email: 'eric.furspan@gmail.com',
   about: [
-    'Software Engineer based in New York. Passionate about crafting engaging & intuitive user experiences on the web.',
+    "I'm a software engineer with a passion for building type-safe, performant, scalable, and maintainable web applications. " +
+      'I enjoy experimenting with new technologies and open source projects and take pride in crafting engaging & intuitive user experiences on the web.',
   ],
   expertise: [
     'Designing, developing, and planning React applications.',
@@ -38,7 +39,7 @@ export default {
     'https://docs.google.com/document/d/e/2PACX-1vRFYzxx4MwLb7-eZOtluuLsJn2yi6-IbryPkOfAKq3XjJIdSEfcQdAz_FPs7tpKJz3IVBQuJRLX0W1o/pub?embedded=true',
   resumeDownloadUrl:
     'https://docs.google.com/document/d/1DuTTxyWvfNpXmj2qNrJnrkcUS2x6OG4cKsmsgyuTm-4/export?format=pdf',
-  links: [
+  socialLinks: [
     {
       name: 'GitHub',
       url: 'https://github.com/ericfurspan',

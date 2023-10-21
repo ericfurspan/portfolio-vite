@@ -6,7 +6,7 @@ const navItems = ['Projects', 'Contact'];
 const HeadingBar = () => (
   <MuiAppBar position="static" color="transparent" elevation={0} sx={{ marginBottom: 4 }}>
     <Toolbar>
-      <Stack direction="row" alignItems="center" sx={{ flexGrow: 1 }}>
+      <Stack direction="column" sx={{ flexGrow: 1 }}>
         <Link href="/" color="inherit" underline="none">
           <Typography
             variant="h5"
@@ -19,6 +19,15 @@ const HeadingBar = () => (
             {appConfig.name}
           </Typography>
         </Link>
+        <Typography
+          variant="body2"
+          sx={{
+            fontFamily: 'fontFamilyRaleway',
+            textTransform: 'uppercase',
+          }}
+        >
+          {appConfig.title}
+        </Typography>
       </Stack>
 
       <Box sx={{ display: { xs: 'none', sm: 'block' } }}>

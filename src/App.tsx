@@ -1,5 +1,5 @@
 import { Container, Divider, Stack } from '@mui/material';
-import { HeadingBar, About, Chips, Contact, Projects, Expertise, Footer } from './components';
+import { HeadingBar, About, Chips, Contact, Projects, Footer } from './components';
 import { ContactProps } from './components/Contact';
 import { ProjectsProps } from './components/Projects';
 import { ChipsProps } from './components/Chips';
@@ -9,14 +9,14 @@ import appConfig from './config';
 interface AppProps {
   name: string;
   email: string;
-  links: ContactProps['socialLinks'];
+  socialLinks: ContactProps['socialLinks'];
   projects: ProjectsProps['projects'];
   skills: ChipsProps['chips'];
   expertise: ExpertiseProps['expertise'];
 }
 
 const App = () => {
-  const { name, email, links, projects, skills, expertise } = appConfig as AppProps;
+  const { name, email, socialLinks, projects, skills } = appConfig as AppProps;
 
   return (
     <>
@@ -26,16 +26,18 @@ const App = () => {
         <Stack spacing={12}>
           <Container>
             <About />
-            <Expertise expertise={expertise} />
+            <br />
+
+            {/* <Expertise expertise={expertise} /> */}
+            <Chips chips={skills} justifyCenter />
           </Container>
 
-          <Chips chips={skills} justifyCenter />
           <Divider variant="fullWidth" light />
 
           <Projects title="Projects & Open Source" projects={projects} />
           <Divider variant="fullWidth" light />
 
-          <Contact title="Contact" socialLinks={links} email={email} />
+          <Contact title="Contact" socialLinks={socialLinks} email={email} />
         </Stack>
       </Container>
 

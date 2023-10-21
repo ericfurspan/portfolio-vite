@@ -7,7 +7,7 @@ export interface ExpertiseProps {
   title?: string;
 }
 
-const Expertise = ({ expertise }: ExpertiseProps) => (
+const Expertise = ({ expertise = [] }: ExpertiseProps) => (
   <Container>
     {expertise.map((expertise) => (
       <Typography key={expertise} variant="body2" gutterBottom>
