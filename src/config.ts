@@ -65,7 +65,8 @@ export default {
   projects: [
     {
       title: 'Local Hoops | Knicks Map',
-      subtitle: 'Find a court. Get a bucket. Film your bucket. Upload it to the map.',
+      subtitle:
+        'Find a court. Get a bucket. Film your bucket. Upload it to the map. A collaboration with the New York Knicks.',
       liveUrl: 'https://www.nba.com/knicks/new-york-hoops',
       sourceUrl: undefined,
       imgUrl:
@@ -103,6 +104,14 @@ export default {
       sourceUrl: 'https://github.com/ericfurspan/portfolio-vite',
       imgUrl: '',
       tools: ['react', 'typescript', 'material-ui', 'vitejs'],
+    },
+    {
+      title: 'US Constitution Quiz',
+      subtitle: 'My very first GitHub project.',
+      liveUrl: 'https://ericfurspan.github.io/us-constitution-quiz',
+      sourceUrl: 'https://github.com/ericfurspan/us-constitution-quiz',
+      imgUrl: '',
+      tools: ['html', 'css', 'javascript'],
     },
   ],
 };
