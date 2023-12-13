@@ -69,8 +69,7 @@ export default {
         'Find a court. Get a bucket. Film your bucket. Upload it to the map. A collaboration with the New York Knicks.',
       liveUrl: 'https://www.nba.com/knicks/new-york-hoops',
       sourceUrl: undefined,
-      imgUrl:
-        'https://localhoops-knicks-map.web.app/static/media/knicks-logo-400px.84565b1e6111372bed1c.png',
+      imgUrl: '/knicks-lh-logo.png',
       tools: ['react', 'javascript', 'firebase', 'chakra-ui'],
     },
     {
